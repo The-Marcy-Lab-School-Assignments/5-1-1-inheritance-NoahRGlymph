@@ -10,9 +10,7 @@ class Quadrilateral {
     return this.side1 + this.side2 + this.side3 + this.side4;
   }
 
-  getArea() {
-    throw new Error('Method not implemented. Area calculation depends on the type of quadrilateral.');
-  }
+  
 }
 
 class Rectangle extends Quadrilateral {
@@ -27,50 +25,36 @@ class Rectangle extends Quadrilateral {
   }
 }
 
-class Square extends Rectangle {
-  constructor(side) {
-    super(side, side);
-    this.side = side;
-  }
+// class Square extends Rectangle {
+//   constructor(side) {
+//     super(side, side);
+//     this.side = side;
+//   }
 
-  getPerimeter() {
-    return this.side * 4;
-  }
+//   getPerimeter() {
+//     return this.side * 4;
+//   }
 
-  getArea() {
-    return this.side * this.side;
-  }
+//   getArea() {
+//     return this.side * this.side;
+//   }
 
-  getDiagonal() {
-    return Math.sqrt(2) * this.side;
-  }
-}
-
-module.exports = { Quadrilateral, Rectangle, Square };
+//   getDiagonal() {
+//     return Math.sqrt(2) * this.side;
+//   }
+// }
 
 
-const { Quadrilateral, Rectangle } = require('./Quadrilateral');
 
 class Square extends Rectangle {
   constructor(side) {
     // Call the parent class constructor with the side length for all four sides
-    super(side, side);
-    this.side = side;
-  }
-
-  // Method to calculate the perimeter of the square
-  getPerimeter() {
-    return this.side * 4;
-  }
-
-  // Method to calculate the area of the square
-  getArea() {
-    return this.side * this.side;
+    super(side, side ,side ,side);
   }
 
   // Method to calculate the diagonal of the square
   getDiagonal() {
-    return Math.sqrt(2) * this.side;
+    return Math.sqrt(2) * this.side1;
   }
 }
 
